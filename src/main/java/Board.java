@@ -63,4 +63,23 @@ public class Board {
         }
         return 0;
     }
+
+    public int verificarVictoriaHorizontal(Player player1, Player player2) {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 4; j++) {
+                String posicion1 = board[i][j];
+                String posicion2 = board[i][j + 1];
+                String posicion3 = board[i][j + 2];
+                String posicion4 = board[i][j + 3];
+                if (!posicion1.equals(" ") && posicion1.equals(posicion2) && posicion2.equals(posicion3) && posicion3.equals(posicion4)){
+                    if (posicion1.equals(player1.getColor().substring(0, 1))) {
+                        return player1.getId();
+                    }
+                    return player2.getId();
+                }
+            }
+        }
+        return 0;
+    }
+    
 }
