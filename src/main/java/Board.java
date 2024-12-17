@@ -114,4 +114,17 @@ public class Board {
         return 0;
     }
 
+    public int entregarGanador(Player player1, Player player2) {
+        int ganadorV = verificarVictoriaVertical(player1, player2);
+        int ganadorH = verificarVictoriaHorizontal(player1, player2);
+        int ganadorD = verificarVictoriaDiagonal(player1, player2);
+        if (ganadorV == 0) {
+            if (ganadorH == 0) {
+                return ganadorD;
+            }
+            return ganadorH;
+        }
+        return ganadorV;
+    }
+
 }
