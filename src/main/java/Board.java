@@ -4,7 +4,7 @@
  * Esta clase incluye atributos para inicializar el tablero
  */
 public class Board {
-    private final String[][] board = new String[6][7];
+    public String[][] board = new String[6][7];
 
     // Constructor
 

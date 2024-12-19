@@ -8,11 +8,11 @@ import java.util.List;
  * y representar el historial de juego
  */
 public class Game {
-    private final Player player1;
-    private final Player player2;
-    private final Board board;
-    private final int currentTurn;
-    private final List<int[]> history;
+    public Player player1;
+    public Player player2;
+    public Board board;
+    public int currentTurn;
+    public List<int[]> history;
 
     // Constructor
 
@@ -74,5 +74,20 @@ public class Game {
      */
     public List<int[]> getHistory() {
         return history;
+    }
+
+    // Otros
+
+    /**
+     * historial() de la clase Game
+     * Imprime el historial del juego en pantalla
+     */
+    public void historial() {
+        for (int i = 0; i < history.size(); i++) {
+            int[] movimiento = history.get(i); // Obtiene el movimiento actual
+            int jugador = movimiento[0];
+            int columna = movimiento[1];
+            System.out.println((i + 1) + ". Jugador " + jugador + " jugó en columna " + columna);
+        }
     }
 }

@@ -5,13 +5,13 @@
  * (victorias, derrotas, empates) y administrar sus piezas restantes
  */
 public class Player {
-    private final int id;
-    private final int wins;
-    private final int losses;
-    private final int draws;
-    private final int remainingPieces;
-    private final String name;
-    private final String color;
+    public int id;
+    public int wins;
+    public int losses;
+    public int draws;
+    public int remainingPieces;
+    public String name;
+    public String color;
 
     // Constructor
 
