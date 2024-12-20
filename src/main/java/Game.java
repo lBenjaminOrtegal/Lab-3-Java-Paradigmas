@@ -90,4 +90,16 @@ public class Game {
             System.out.println((i + 1) + ". Jugador " + jugador + " jugó en columna " + columna);
         }
     }
+
+    /**
+     * esEmpate() de la clase Game
+     * Determina si el juego actual es un empate verificando las piezas restantes de los jugadores y verificando si hay victoria
+     * @return {@code true} si el juego finaliza en empate; {@code false} en caso contrario
+     */
+    public boolean esEmpate() {
+        if (board.entregarGanador(getPlayer1(), getPlayer2()) == 0 && player1.getRemainingPieces() == 0 && player2.getRemainingPieces() == 0) {
+            return true;
+        }
+        return board.sePuedeJugar() && player1.getRemainingPieces() == 0 && player2.getRemainingPieces() == 0;
+    }
 }
