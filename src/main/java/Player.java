@@ -5,13 +5,13 @@
  * (victorias, derrotas, empates) y administrar sus piezas restantes
  */
 public class Player {
-    public int id;
-    public int wins;
-    public int losses;
-    public int draws;
-    public int remainingPieces;
-    public String name;
-    public String color;
+    private final int id;
+    private int wins;
+    private int losses;
+    private int draws;
+    private int remainingPieces;
+    private final String name;
+    private final String color;
 
     // Constructor
 
@@ -98,16 +98,26 @@ public class Player {
     // Otros
 
     /**
-     * mostrarPlayer() de la clase Player
+     * mostrarEstadisticas() de la clase Player
      * Imprime en pantalla todos los parametros del jugador
      */
-    public void mostrarPlayer() {
-        System.out.println("Estadisticas de " + getName());
-        System.out.println("Id: " + getId());
-        System.out.println("Color: " + getColor());
-        System.out.println("Victorias: " + getWins());
-        System.out.println("Derrotas: " + getLosses());
-        System.out.println("Empates: " + getDraws());
-        System.out.println("Piezas Restantes: " + getRemainingPieces());
+    public void mostrarEstadisticas () {
+        System.out.println(getName() + " ("+ getColor() + ") -> Victorias: " + getWins() + ", Derrotas: " + getLosses() + ", Empates: " + getDraws() + ", Piezas: " + getRemainingPieces());
+    }
+
+    /**
+     * actualizarEstadisticas() de la clase Player
+     * Actualiza al jugador segun el resultado del juego
+     */
+    public void actualizarEstadisticas(String resultado) {
+        if (resultado.equals("win")) {
+            wins = getWins() + 1;
+        }
+        else if (resultado.equals("loss")) {
+            losses = getLosses() + 1;
+        }
+        else {
+            draws = getDraws() + 1;
+        }
     }
 }
