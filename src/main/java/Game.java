@@ -61,6 +61,21 @@ public class Game {
     }
 
     /**
+     * getCurrentPlayer() de la clase Game
+     * Retorna el jugador con el turno en curso del juego
+     * Se verifica quien fue el último jugador en jugar a traves del historial del juego
+     */
+    public Player getCurrentPlayer() {
+        if (history.isEmpty()) {
+            return player1;
+        }
+        else if (history.get(history.size() - 1)[0] == player1.getId()) {
+            return player2;
+        }
+        return player1;
+    }
+
+    /**
      * getCurrentTurn() de la clase Game
      * Retorna el turno actual del juego
      */
