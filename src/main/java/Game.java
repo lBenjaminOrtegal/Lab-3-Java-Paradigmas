@@ -8,11 +8,11 @@ import java.util.List;
  * y representar el historial de juego
  */
 public class Game {
-    public Player player1;
-    public Player player2;
-    public Board board;
-    public int currentTurn;
-    public List<int[]> history;
+    private final Player player1;
+    private final Player player2;
+    private final Board board;
+    private int currentTurn;
+    private final List<int[]> history;
 
     // Constructor
 
@@ -58,6 +58,14 @@ public class Game {
      */
     public Board getBoard() {
         return board;
+    }
+
+    /**
+     * boardGetState() de la clase Game
+     * Llama al método mostrarBoard() de la clase Board con el tablero del juego
+     */
+    public void boardGetState() {
+        getBoard().mostrarBoard();
     }
 
     /**
@@ -116,5 +124,20 @@ public class Game {
             return true;
         }
         return board.sePuedeJugar() && player1.getRemainingPieces() == 0 && player2.getRemainingPieces() == 0;
+    }
+
+    /**
+     * mostrarJuego() de la clase Game
+     * Imprime los parametros del juego
+     */
+    public void mostrarJuego() {
+        System.out.println("Tablero Actual:");
+        boardGetState();
+        System.out.println("Turno Actual: " + getCurrentTurn());
+        System.out.println("Jugador en Turno: " + getCurrentPlayer().getName());
+        System.out.println("Historial del Juego: ");
+        historial();
+        getPlayer1().mostrarEstadisticas();
+        getPlayer2().mostrarEstadisticas();
     }
 }
