@@ -99,6 +99,28 @@ public class Game {
         return history;
     }
 
+    // Modificador
+
+    /**
+     * endGame() de la clase Game
+     * Finaliza un juego actualizando las estadisticas de los jugadores dependiendo del resultado de la partida
+     */
+    public void endGame() {
+        int ganador = getBoard().entregarGanador(getPlayer1(), getPlayer2());
+        if (ganador == 0) {
+            getPlayer1().actualizarEstadisticas("draw");
+            getPlayer2().actualizarEstadisticas("draw");
+        }
+        else if (ganador == getPlayer1().getId()) {
+            getPlayer1().actualizarEstadisticas("win");
+            getPlayer2().actualizarEstadisticas("loss");
+        }
+        else if (ganador == getPlayer2().getId()){
+            getPlayer1().actualizarEstadisticas("loss");
+            getPlayer2().actualizarEstadisticas("win");
+        }
+    }
+
     // Otros
 
     /**
