@@ -4,7 +4,7 @@
  * Esta clase incluye atributos para identificar al jugador, registrar sus estadísticas
  * (victorias, derrotas, empates) y administrar sus piezas restantes
  */
-public class Player {
+public class Player implements InterfazPlayer{
     private final int id;
     private int wins;
     private int losses;
@@ -95,13 +95,23 @@ public class Player {
         return color;
     }
 
+    // Modificadores
+
+    /**
+     * lessPiece() de la clase Player
+     * Retorna el jugador con una pieza menos
+     */
+    public void restarPiezaPlayer() {
+        remainingPieces--;
+    }
+
     // Otros
 
     /**
      * mostrarEstadisticas() de la clase Player
      * Imprime en pantalla todos los parametros del jugador
      */
-    public void mostrarEstadisticas () {
+    public void mostrarEstadisticas() {
         System.out.println(getName() + " ("+ getColor() + ") -> Victorias: " + getWins() + ", Derrotas: " + getLosses() + ", Empates: " + getDraws() + ", Piezas: " + getRemainingPieces());
     }
 

@@ -3,7 +3,7 @@
  * Representa el tablero del juego, almacenando su información y estadísticas
  * Esta clase incluye atributos para inicializar el tablero
  */
-public class Board {
+public class Board implements  InterfazBoard{
     public String[][] board = new String[6][7];
 
     // Constructor

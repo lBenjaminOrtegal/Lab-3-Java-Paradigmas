@@ -7,7 +7,7 @@ import java.util.List;
  * Esta clase incluye atributos para identificar a los jugadores, identificar el estado actual del tablero
  * y representar el historial de juego
  */
-public class Game {
+public class Game implements InterfazGame{
     private final Player player1;
     private final Player player2;
     private final Board board;
@@ -91,15 +91,7 @@ public class Game {
         return currentTurn;
     }
 
-    /**
-     * getHistory() de la clase Game
-     * Retorna el historial en forma de lista del juego, cada elemento tiene la forma (id: int, columna: int)
-     */
-    public List<int[]> getHistory() {
-        return history;
-    }
-
-    // Modificador
+    // Modificadores
 
     /**
      * endGame() de la clase Game
@@ -118,6 +110,48 @@ public class Game {
         else if (ganador == getPlayer2().getId()){
             getPlayer1().actualizarEstadisticas("loss");
             getPlayer2().actualizarEstadisticas("win");
+        }
+    }
+
+    /**
+     * realizarMovimiento() de la clase Game
+     * Realiza un movimiento en el juego
+     * @param player Jugador que realiza la jugada
+     * @param columna Indice de la columna en donde se realiza la jugada
+     */
+    public void realizarMovimiento(Player player, int columna) {
+        if (getCurrentPlayer() == player) {
+            getBoard().jugarFicha(columna, String.valueOf(player.getColor().charAt(0)));
+            currentTurn++;
+            if (player == getPlayer1()) {
+                getPlayer1().restarPiezaPlayer();
+            }
+            else {
+                getPlayer2().restarPiezaPlayer();
+            }
+            history.add(new int[] {player.getId(), columna});
+            if (getBoard().entregarGanador(getPlayer1(), getPlayer2()) != 0) {
+                System.out.println("\n¡VICTORIA! Jugador "+ getBoard().entregarGanador(getPlayer1(), getPlayer2()) + " ha ganado");
+                endGame();
+                boardGetState();
+                System.out.println("\n### Estadísticas Actualizadas ###");
+                getPlayer1().mostrarEstadisticas();
+                getPlayer2().mostrarEstadisticas();
+            }
+            else if (esEmpate()) {
+                System.out.println("\n¡EMPATE!");
+                endGame();
+                boardGetState();
+                System.out.println("\n### Estadísticas Actualizadas ###");
+                getPlayer1().mostrarEstadisticas();
+                getPlayer2().mostrarEstadisticas();
+            }
+            else {
+                boardGetState();
+            }
+        }
+        else {
+            System.out.println("No es tu turno de jugar!");
         }
     }
 
