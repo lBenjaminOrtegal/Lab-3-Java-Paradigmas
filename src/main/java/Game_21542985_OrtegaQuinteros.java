@@ -7,10 +7,10 @@ import java.util.List;
  * Esta clase incluye atributos para identificar a los jugadores, identificar el estado actual del tablero
  * y representar el historial de juego
  */
-public class Game implements InterfazGame{
-    private final Player player1;
-    private final Player player2;
-    private final Board board;
+public class Game_21542985_OrtegaQuinteros implements InterfazGame_21542985_OrtegaQuinteros {
+    private final Player_21542985_OrtegaQuinteros player1;
+    private final Player_21542985_OrtegaQuinteros player2;
+    private final Board_21542985_OrtegaQuinteros board;
     private int currentTurn;
     private final List<int[]> history;
 
@@ -26,7 +26,7 @@ public class Game implements InterfazGame{
      * @param currentTurn Turno actual del juego
      * Además, se crea una lista para representar el historial del juego
      */
-    public Game(Player player1, Player player2, Board board, int currentTurn) {
+    public Game_21542985_OrtegaQuinteros(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2, Board_21542985_OrtegaQuinteros board, int currentTurn) {
         this.player1 = player1;
         this.player2 = player2;
         this.board = board;
@@ -40,7 +40,7 @@ public class Game implements InterfazGame{
      * getPlayer1() de la clase Game
      * Retorna el player1 del juego
      */
-    public Player getPlayer1() {
+    public Player_21542985_OrtegaQuinteros getPlayer1() {
         return player1;
     }
 
@@ -48,7 +48,7 @@ public class Game implements InterfazGame{
      * getPlayer2() de la clase Game
      * Retorna el player2 del juego
      */
-    public Player getPlayer2() {
+    public Player_21542985_OrtegaQuinteros getPlayer2() {
         return player2;
     }
 
@@ -56,7 +56,7 @@ public class Game implements InterfazGame{
      * getBoard() de la clase Game
      * Retorna el tablero del juego
      */
-    public Board getBoard() {
+    public Board_21542985_OrtegaQuinteros getBoard() {
         return board;
     }
 
@@ -73,7 +73,7 @@ public class Game implements InterfazGame{
      * Retorna el jugador con el turno en curso del juego
      * Se verifica quien fue el último jugador en jugar a traves del historial del juego
      */
-    public Player getCurrentPlayer() {
+    public Player_21542985_OrtegaQuinteros getCurrentPlayer() {
         if (history.isEmpty()) {
             return player1;
         }
@@ -119,7 +119,7 @@ public class Game implements InterfazGame{
      * @param player Jugador que realiza la jugada
      * @param columna Indice de la columna en donde se realiza la jugada
      */
-    public void realizarMovimiento(Player player, int columna) {
+    public void realizarMovimiento(Player_21542985_OrtegaQuinteros player, int columna) {
         if (getCurrentPlayer() == player) {
             getBoard().jugarFicha(columna, String.valueOf(player.getColor().charAt(0)));
             currentTurn++;
@@ -134,7 +134,7 @@ public class Game implements InterfazGame{
                 System.out.println("\n¡VICTORIA! Jugador "+ getBoard().entregarGanador(getPlayer1(), getPlayer2()) + " ha ganado");
                 endGame();
                 boardGetState();
-                System.out.println("\n### Estadísticas Actualizadas ###");
+                System.out.println("\n### Estadisticas Actualizadas ###");
                 getPlayer1().mostrarEstadisticas();
                 getPlayer2().mostrarEstadisticas();
             }
@@ -142,7 +142,7 @@ public class Game implements InterfazGame{
                 System.out.println("\n¡EMPATE!");
                 endGame();
                 boardGetState();
-                System.out.println("\n### Estadísticas Actualizadas ###");
+                System.out.println("\n### Estadisticas Actualizadas ###");
                 getPlayer1().mostrarEstadisticas();
                 getPlayer2().mostrarEstadisticas();
             }

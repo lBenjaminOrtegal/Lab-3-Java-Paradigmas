@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Player player1 = null;
-        Player player2 = null;
-        Game G0 = null;
-        Board B0 = new Board();
+        Player_21542985_OrtegaQuinteros player1 = null;
+        Player_21542985_OrtegaQuinteros player2 = null;
+        Game_21542985_OrtegaQuinteros G0 = null;
+        Board_21542985_OrtegaQuinteros B0 = new Board_21542985_OrtegaQuinteros();
         String nombre1;
         String nombre2;
         String color1;
@@ -62,10 +62,10 @@ public class Main {
 
                     System.out.println("\n¡Juego creado exitosamente!");
                     cantidad_players++;
-                    player1 = new Player(cantidad_players, nombre1, color1,0, 0, 0, fichas);
+                    player1 = new Player_21542985_OrtegaQuinteros(cantidad_players, nombre1, color1,0, 0, 0, fichas);
                     cantidad_players++;
-                    player2 = new Player(cantidad_players, nombre2, color2, 0, 0, 0, fichas);
-                    G0 = new Game(player1, player2, B0, 1);
+                    player2 = new Player_21542985_OrtegaQuinteros(cantidad_players, nombre2, color2, 0, 0, 0, fichas);
+                    G0 = new Game_21542985_OrtegaQuinteros(player1, player2, B0, 1);
                     break;
                 case 2:
                     System.out.println("Estado Actual del Tablero:");

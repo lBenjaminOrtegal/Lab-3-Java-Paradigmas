@@ -3,7 +3,7 @@
  * Representa el tablero del juego, almacenando su información y estadísticas
  * Esta clase incluye atributos para inicializar el tablero
  */
-public class Board implements  InterfazBoard{
+public class Board_21542985_OrtegaQuinteros implements InterfazBoard_21542985_OrtegaQuinteros {
     public String[][] board = new String[6][7];
 
     // Constructor
@@ -12,7 +12,7 @@ public class Board implements  InterfazBoard{
      * Constructor de la clase Board
      * Crea un tablero inicializando cada casilla de la matriz con un espacio en blanco
      */
-    public Board() {
+    public Board_21542985_OrtegaQuinteros() {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 this.board[i][j] = " ";
@@ -78,7 +78,7 @@ public class Board implements  InterfazBoard{
      * @param player2 Player2, usado para retornar el id del jugador ganador
      * @return {@code 0} si no hay victoria vertical; Retorna el id del ganador en caso contrario
      */
-    public int verificarVictoriaVertical(Player player1, Player player2) {
+    public int verificarVictoriaVertical(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2) {
         for (int j = 0; j < 7; j++) {
             for (int i = 0; i < 3; i++) {
                 String posicion1 = board[i][j];
@@ -103,7 +103,7 @@ public class Board implements  InterfazBoard{
      * @param player2 Player2, usado para retornar el id del jugador ganador
      * @return {@code 0} si no hay victoria horizontal; Retorna el id del ganador en caso contrario
      */
-    public int verificarVictoriaHorizontal(Player player1, Player player2) {
+    public int verificarVictoriaHorizontal(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2) {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
                 String posicion1 = board[i][j];
@@ -128,7 +128,7 @@ public class Board implements  InterfazBoard{
      * @param player2 Player2, usado para retornar el id del jugador ganador
      * @return {@code 0} si no hay victoria diagonal; Retorna el id del ganador en caso contrario
      */
-    public int verificarVictoriaDiagonal(Player player1, Player player2) {
+    public int verificarVictoriaDiagonal(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2) {
         for (int i = 0; i < 3; i++) { // Inferior Diagonal
             for (int j = 0; j < 4; j++) {
                 String posicion1 = board[i][j];
@@ -167,7 +167,7 @@ public class Board implements  InterfazBoard{
      * @param player2 Player2, usado para retornar el id del jugador ganador y llamar a las funciones de verificar victoria
      * @return {@code 0} si no hay victoria; Retorna el id del ganador en caso contrario
      */
-    public int entregarGanador(Player player1, Player player2) {
+    public int entregarGanador(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2) {
         int ganadorV = verificarVictoriaVertical(player1, player2);
         int ganadorH = verificarVictoriaHorizontal(player1, player2);
         int ganadorD = verificarVictoriaDiagonal(player1, player2);

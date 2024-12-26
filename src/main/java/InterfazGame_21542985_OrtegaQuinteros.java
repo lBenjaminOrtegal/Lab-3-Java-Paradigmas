@@ -1,6 +1,4 @@
-import java.util.List;
-
-public interface InterfazGame {
+public interface InterfazGame_21542985_OrtegaQuinteros {
 
     // Selectores
 
@@ -8,19 +6,19 @@ public interface InterfazGame {
      * getPlayer1() de la clase Game
      * Retorna el player1 del juego
      */
-    Player getPlayer1();
+    Player_21542985_OrtegaQuinteros getPlayer1();
 
     /**
      * getPlayer2() de la clase Game
      * Retorna el player2 del juego
      */
-    Player getPlayer2();
+    Player_21542985_OrtegaQuinteros getPlayer2();
 
     /**
      * getBoard() de la clase Game
      * Retorna el tablero del juego
      */
-    Board getBoard();
+    Board_21542985_OrtegaQuinteros getBoard();
 
     /**
      * boardGetState() de la clase Game
@@ -33,7 +31,7 @@ public interface InterfazGame {
      * Retorna el jugador con el turno en curso del juego
      * Se verifica quien fue el último jugador en jugar a traves del historial del juego
      */
-    Player getCurrentPlayer();
+    Player_21542985_OrtegaQuinteros getCurrentPlayer();
 
     /**
      * getCurrentTurn() de la clase Game
@@ -55,7 +53,7 @@ public interface InterfazGame {
      * @param player Jugador que realiza la jugada
      * @param columna Indice de la columna en donde se realiza la jugada
      */
-    void realizarMovimiento(Player player, int columna);
+    void realizarMovimiento(Player_21542985_OrtegaQuinteros player, int columna);
 
     // Otros
 

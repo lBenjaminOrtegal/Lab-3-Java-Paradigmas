@@ -1,4 +1,4 @@
-public interface InterfazBoard {
+public interface InterfazBoard_21542985_OrtegaQuinteros {
 
     // Modificador
 
@@ -33,7 +33,7 @@ public interface InterfazBoard {
      * @param player2 Player2, usado para retornar el id del jugador ganador
      * @return {@code 0} si no hay victoria vertical; Retorna el id del ganador en caso contrario
      */
-    int verificarVictoriaVertical(Player player1, Player player2);
+    int verificarVictoriaVertical(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2);
 
     /**
      * verificarVictoriaHorizontal() de la clase Board
@@ -42,7 +42,7 @@ public interface InterfazBoard {
      * @param player2 Player2, usado para retornar el id del jugador ganador
      * @return {@code 0} si no hay victoria horizontal; Retorna el id del ganador en caso contrario
      */
-    int verificarVictoriaHorizontal(Player player1, Player player2);
+    int verificarVictoriaHorizontal(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2);
 
     /**
      * verificarVictoriaDiagonal() de la clase Board
@@ -51,7 +51,7 @@ public interface InterfazBoard {
      * @param player2 Player2, usado para retornar el id del jugador ganador
      * @return {@code 0} si no hay victoria diagonal; Retorna el id del ganador en caso contrario
      */
-    int verificarVictoriaDiagonal(Player player1, Player player2);
+    int verificarVictoriaDiagonal(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2);
 
     /**
      * entregarGanador() de la clase Board
@@ -60,5 +60,5 @@ public interface InterfazBoard {
      * @param player2 Player2, usado para retornar el id del jugador ganador y llamar a las funciones de verificar victoria
      * @return {@code 0} si no hay victoria; Retorna el id del ganador en caso contrario
      */
-    int entregarGanador(Player player1, Player player2);
+    int entregarGanador(Player_21542985_OrtegaQuinteros player1, Player_21542985_OrtegaQuinteros player2);
 }

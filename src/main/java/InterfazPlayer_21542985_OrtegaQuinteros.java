@@ -1,4 +1,4 @@
-public interface InterfazPlayer {
+public interface InterfazPlayer_21542985_OrtegaQuinteros {
     // Selectores
 
     /**

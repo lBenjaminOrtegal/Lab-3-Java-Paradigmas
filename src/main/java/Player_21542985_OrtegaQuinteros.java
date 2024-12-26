@@ -4,7 +4,7 @@
  * Esta clase incluye atributos para identificar al jugador, registrar sus estadísticas
  * (victorias, derrotas, empates) y administrar sus piezas restantes
  */
-public class Player implements InterfazPlayer{
+public class Player_21542985_OrtegaQuinteros implements InterfazPlayer_21542985_OrtegaQuinteros {
     private final int id;
     private int wins;
     private int losses;
@@ -27,7 +27,7 @@ public class Player implements InterfazPlayer{
      * @param draws Número de empates acumulados por el jugador
      * @param remainingPieces Número de piezas restantes disponibles para el jugador
      */
-    public Player(int id, String name, String color, int wins, int losses, int draws, int remainingPieces) {
+    public Player_21542985_OrtegaQuinteros(int id, String name, String color, int wins, int losses, int draws, int remainingPieces) {
         this.id = id;
         this.name = name;
         this.color = color;
