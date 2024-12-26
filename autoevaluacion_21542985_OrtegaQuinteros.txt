@@ -1,0 +1,30 @@
+RNF1 - Autoevaluación: 1
+RNF2 - Lenguaje y Herramientas de Trabajo: 1
+RNF3 - Version: 1
+RNF4 - Interacciones con el Programa: 1
+RNF5 - Uso del Paradigma: 1
+RNF6 - Prerrequisitos: 1
+RNF7 - Documentacion JavaDoc: 1
+RNF8 - Organización: 1
+RNF9 - Diagrama de Analisis: 1
+RNF10 - Diagrama de Diseño: 1
+RNF11- Uso de Git: 1
+
+RF01 - Clases y estructuras que forman el programa: 1
+RF02 - Menú interactivo por terminal: 1
+RF03 - TDA Player - constructor: 1
+RF04 - TDA Board - constructor: 1
+RF05 - TDA Board - otros - sePuedeJugar: 1
+RF06 - TDA Board - modificador - jugarFicha: 1
+RF07 - TDA Board - otros - verificarVictoriaVertical: 1
+RF08 - TDA Board - otros - verificarVictoriaHorizontal: 1
+RF09 - TDA Board - otros - verificarVictoriaDiagonal: 1
+RF10 - TDA Board - otros - entregarGanador: 1
+RF11 - TDA Game - constructor: 1
+RF12 - TDA Game - otros - history: 1
+RF13 - TDA Game - otros - esEmpate: 1
+RF14 - TDA Player - otros - actualizarEstadisticas: 1
+RF15 - TDA Game - selector - getCurrentPlayer: 1
+RF16 - TDA Game - selector - board-get-state: 1
+RF17 - TDA Game - modificador - endGame: 1
+RF18 - TDA Game - modificador - realizarMovimiento: 1
